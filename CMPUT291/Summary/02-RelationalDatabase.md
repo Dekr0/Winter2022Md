@@ -34,19 +34,40 @@
 ### "key"
 ---
 - A set of fields is a key for a relation if it is both (A set of fields can consist of a single field).
-  - *unique* : **no two distinct tuples** can have **same** values in all key fields.
+  - *unique* : **no two distinct tuples** can have **same** values in **all *key* fields**.
   - *minimal* : no subset of a key is a key.
 ---
 #### Primary Key
 ---
 - A relation can have only one primary key (one defined by DBA - Database Administrator).
   - Use *PRIMARY KEY* to define
+
+  ```sql
+  CREATE TABLE Enrolled(
+      [sid] char(8), 
+      [cid] char(8), 
+      [name] char(15), 
+      PRIMARY KEY([sid])
+  );
+  ```
+
   - Fields need to be *NOT NULL*
+
 ---
 #### Candidate Key
 ---
 - A relation can have many candidate keys.
   - use *UNIQUE* to define
+
+  ```sql
+  CREATE TABLE Students(
+      [sid] char(8), 
+      [name] char(8), 
+      [email] char(32) 
+      PRIMARY KEY ([sid]), 
+      UNIQUE([name], [email])
+  );
+  ```
 
 - Primary key can be picked from one candidate key that is most important.
 ---

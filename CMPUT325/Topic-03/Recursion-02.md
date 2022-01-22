@@ -1,24 +1,19 @@
-## Lecture 02
----
-##### 2022-1-11
----
-### Recursion (Induction)
----
-- Do not trace through the recursion initally
+
+
+# Recursion (Induction)
+
+- Do not trace through the recursion initially as a loop
   - examples approach : bottom to top and top to bottom
-
 - Two essential parts : *base case* and *reductive case*
-
 - *Base case* - terminate condition
-
 - *Reductive case* - subproblem
   - case / problem need to be reduced in some way from larger problem
   - Assume the reductive case / subproblem always give back the right answer by **Induction**
   - Find a way to use the result from reductive case / subproblem
-
+- Reductive cases can more than one if there are some conditions need to check
 - At this stage, trace through the recursion to check it whether it is work
 ---
-### Implementation of some functions using recursion
+## Implementation of some functions using recursion
 ---
 Append two lists
 ```lisp
@@ -64,11 +59,11 @@ rev(L) =
 
 - Common way to reduce the list : r or rest (cdr in LISP)
 
-- Do recursion over one list instead of mutiple lists. If a recursion involve handling mutiple lists, decompose  the problem into smaller problems.
+- Do recursion over one list instead of multiple lists. If a recursion involve handling multiple lists, decompose  the problem into smaller problems.
 ---
-### Introduction to LISP
+## Introduction to LISP
 ---
-- For every (...), LISP intereperts as a function call
+- For every (...), LISP interprets as a function call
   - ( null (1 2) ), (1 2) is also considered as another function call where the function name is " 1 ".
   - To let a list or (...) inside a function call be argument, use quote or " ' " to tell LISP not to evaluate it / treat as a function call.
 ---

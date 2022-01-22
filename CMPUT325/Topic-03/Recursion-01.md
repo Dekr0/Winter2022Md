@@ -1,9 +1,6 @@
-## Lecture 03
----
-##### 2022-01-13
----
-### Reucrsion
----
+
+# Reucrsion
+
 - Recursion must happen with recursively calling (smaller) subproblems.
   
 - Reduce the problem into subproblem in a specific way
@@ -12,7 +9,7 @@
 
 - By induction, assume recursive call always **return the right result** if above steps are done **correctly and logically**.
 ---
-### Lisp built-in function and Special Forms
+## Lisp built-in function and Special Forms
 ---
 Set variable
 ```lisp
