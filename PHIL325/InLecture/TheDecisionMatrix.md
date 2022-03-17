@@ -41,6 +41,10 @@
 
 - *Ordinal scales* is *qualitative comparison*. The number in that scale only **shows the order** of the outcome. It doesn't tell how much outcomes are difference to each other. 
   - The number **can be arbitrary** as long as the number in the scale **show the order** of the outcomes
+- For ordinal scales
+  - It is positive monotone transformation
+  - $f(x)\geq f(y)$ if and only if $x \geq y$
+
 
 ------
 
@@ -49,6 +53,13 @@
 ------
 
 - Both interval scales and ratio scales can be considered as ordinal scales.
+
+- For interval scales, it accurately reflect differences between objects.
+  - It is positive linear transformation
+  - $f'(x)=kf(x)+m$
+- For ratio scales, accurately reflect ratios between objects.
+  - It is positive multiplication
+  - $f'(x)=kf(x)$
 
 ------
 

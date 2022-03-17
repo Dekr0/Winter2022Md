@@ -155,3 +155,69 @@ int main(int argc, char *argv[]) {
   - Create a thread
 
     - `pthread_create (&tid, &attr, start_routine, arg)`
+
+  - Exit a thread
+
+    - `pthread_exit()`
+
+  - Wait for a thread to exit
+
+    - `pthread_join(tid, status)`
+
+------
+
+### Example
+
+------
+
+```c
+#define _REENTRANT
+#include <pthread.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
+void *athread ( void *arg ) {
+    int i;
+    pid_t pid;
+    pthread_t tid;
+    
+    pid = getpid();
+    tid = pthread_self();
+    
+    printf( "Process ID: %d, thread ID: %u (0x%x), \
+           arg: %s\n", 
+          (int) pid,
+          (unsigned int) pthread_self(),
+          (unsigned int) pthread_self(),
+          (char *) arg );
+}
+
+int main ( int argc, char *argv[] ) {
+    int i, rval;
+    pthread_t ntid;
+    
+    for ( i = 0; i < argc; ++i ) {
+        rval = pthread_create( &ntid, NULL, athread, 
+                             (void *) argv[i] );
+        
+        if (rval) {
+            fprintf( stderr, "thr_create:%s\n", 
+                   strerror(rval) );
+            exit(1);
+        }
+    }
+    
+    pthread_exit(0);
+}
+```
+
+- If a multi-threaded process forks a child, how many threads should the child inherit ?
+  - Child only inherit one thread. The thread child inherits is a copy of the thread that called `fork` in the parent.
+- Suitability of the following two multi-thread architectures:
+  - use of library routines that returns results in static areas (e.g., `errno`) : not suitable because there is an extra static `errno` for each thread and static 
+  - use of non-reentrant library routines
+    - When some variables are set inside the routine itself => non-reentrant
+    - If a routine is interrupted, then enter the routine by another caller. That caller might destroy the original state of the computation of the current executing caller . The result is unpredictable.
+    - Use reentrant library
+

@@ -18,7 +18,7 @@
   - Voluntary exchange
   - Markets
   - Price determined by market
-- Characteristic of capitalsim will lead to **wealth & societal prosperity**
+- Characteristic of capitalism will lead to **wealth & societal prosperity**
 - Competition can result spurs innovation & growth
 - Division of Labour
   - How tasks are organized and distributed among workers
@@ -132,3 +132,4 @@
   - Class situation: shared economic interests in market exchange
   - Resources that you bring to the market determine life chances
 
+- 
