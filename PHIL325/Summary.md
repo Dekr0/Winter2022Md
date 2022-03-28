@@ -118,7 +118,7 @@
 
 - Determine a series of $\alpha$, $\alpha_1$, $\alpha_2$, ..., $\alpha_n$, such that $\alpha_1+\alpha_2+...+\alpha_n=1$, then define $\alpha$-index of an act $a_i$ as
   $$
-  \alpha_1 \cdot max^1(a_i) + \alpha_2 \cdot max^2(a_i) + ... + \alpha_n \cdot min(a_i)
+  \alpha_1 \cdot(a_1,s_1) + \alpha_2 \cdot (a_1, s_2) + ... + \alpha_n \cdot (a_1,s_n) = \alpha(a_1)
   $$
 
 - then choose the act with the **greatest** $\alpha$-index
@@ -258,4 +258,4 @@ $$
 - Probability that are given
   - Probability of A happen n times given not B : p(A|~B) = $x^n$
   - Probability of A happen n times given B : p(A|B) = $x'^n$
-- Find probability of B happen given A : p(B|A)
+- Find probability of B / not B happen given A (posterior): p(B|A) and p(~B|A)

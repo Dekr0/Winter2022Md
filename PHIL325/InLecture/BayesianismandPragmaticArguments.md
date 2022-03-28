@@ -207,6 +207,8 @@
 
 #### Paul Samuelson's Revealed Preference Theory
 
+------
+
 - A forceful objection to the small improvement argument.
 
 ------
