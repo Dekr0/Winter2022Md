@@ -27,12 +27,13 @@
 ------
 
 - Dominated acts must not chosen.
-
 - Dominated acts : *acts* 
   - whose all outcomes under every state are **at least as rational as** other outcomes of other acts under every state
   -  **and** there are some outcomes under some states are **less rational** than outcomes of other acts under those states
-  
 - Let $v(a_i, s_j)$ be the **value of the outcome** corresponding to the act $a_i$ and the state $s_j$.
+- Notice if one act **does not dominate** another act in **one state** while it can **dominate another act** in **others state**, 
+  - the **domination process** terminate
+
 
 ------
 
