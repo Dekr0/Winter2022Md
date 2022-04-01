@@ -62,9 +62,3 @@ Overview of the UART Registers
   - IRQ - page 47.
 
 ------
-
-## Serial Peripheral Interface (SPI)
-
-------
-
-- 

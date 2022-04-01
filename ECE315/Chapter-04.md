@@ -1,5 +1,9 @@
 # Chapter 04
 
+## Multitasking
+
+------
+
 - An interrupt task need to be finished as soon as possible
 - Idle task is to safely use up the remaining idle task or handle other low priority task such as garbage collection, clean up, etc.
 - As long as the tasks with highest or higher priority is ready to run in **pre-emptive multitasking** system, they can use the CPU and run first compare to other tasks (available to run) with lower priority.
@@ -11,6 +15,13 @@
 - There are also priorities for interrupts that are managed by hardware.
   - Interrupts can be quite disrupted.
   - Interrupts need to be very soon / short.
+
+------
+
+## Mutex, Semaphore, Deadlock
+
+------
+
 - Functions that implement counting semaphores are also need protection from interrupts.  They turn off the interrupts to perform the update on the data structure (integer count and a queue of tasks).
 - Semaphores itself is a critical sections. It has to be protected.
 - Highest priority get unblock first. Same priority, the one with longest waiting time get unblock first.
@@ -23,6 +34,13 @@
   - 2nd condition is hard to fix because a task need two or more resources quiet often.
   - 3rd condition is hard to implement
   - 4th condition, it is not obvious
+
+------
+
+## Watchdog Timer
+
+------
+
 - If we are entrust the operation of large scale equipment / potential dangerous equipment, or equipment that are in a distance that operators and developers can't get access easily, there must be ways to let it recover from catastrophic failure (software and hardware failure)
   - Standard trick : watchdog timer (independent of operating system, must away from the users)
 - Watchdog doesn't necessarily fix the deadlock. It depends how critical the situation of deadlock is. If a watchdog timer is not implemented properly, it will ignore it.
@@ -34,3 +52,18 @@
 - Deadlock is similar to priority inversion due to the characteristic of which tasks are blocked each other.
   - Deadlock is more serious and there's no simple to way to fix it.
 
+------
+
+## Figures of Merit (Property) for Real-Time Kernels
+
+------
+
+- Making decision on what OS to use => what sort things are looked for and consider.
+- Scalability - if there are features that are not needed, then is it possible to let them out.
+- Faster response time is not sufficient
+  - fast in all time? but slow in some situation
+  - worst case
+- How to make a system more predictable and deterministic?
+  - Use of priority.
+  - If some services / tasks in a system are more important than others, higher priority should be assigned to them
+  - so that better quality of service => faster response and more deterministic response.
