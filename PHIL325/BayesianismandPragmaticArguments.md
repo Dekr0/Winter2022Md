@@ -163,7 +163,7 @@
 - Because z is strictly better than x, even after you have paid the fee for swapping, rationality tells you that you should accept the offer.
 - This means that you end up where you started, the only difference being that you now have three cents less.
 - This procedure is thereafter iterated over and over again. After a billion cycles you go bankrupts.
-- ![Cyclic Preference](CyclicPreference.png)
+- ![Cyclic Preference](../Static/CyclicPreference.png)
 
 - Conclusion is ***not*** that a rational preference must be transitive.
 - The conclusion is rather that if we permit cyclic preference orderings, then the contradiction in the ***money pump argument*** is unavoidable.

@@ -66,8 +66,6 @@
 
 ------
 
-![image-20220117112811550](F:\CourseNote\Winter2022\Winter2022Md\PHIL325\InLecture\image-20220117112811550.png)
-
   - Neither a3 nor a4 are dominated each other because $v(a_4,s_2) > $
 
 ------
@@ -82,7 +80,7 @@
 - If the **worst possible outcome** of an act is **better than** the **worst possible outcome** of another act, the **first** act should be chosen.
 - This should not be used in ***decision under risk***.
 
-![image-20220121230826400](image-20220121230826400.png)
+![MaximinEx](Static/MaximinEx.png)
 
 
 
@@ -112,17 +110,17 @@
 
 ------
 
-![image-20220121231319150](image-20220121231319150.png)
+![Leximin1](./Static/Leximin1.png)
 
-![image-20220121231329086](image-20220121231329086.png)
+![Leximin2](./Static/Leximin2.png)
 
-![image-20220121231336831](image-20220121231336831.png)
+![Leximin3](./Static/Leximin3.png)
 
-![image-20220121231343258](image-20220121231343258.png)
+![Leximin4](./Static/Leximin4.png)
 
-![image-20220121231349190](image-20220121231349190.png)
+![Leximin5](./Static/Leximin5.png)
 
-![image-20220121231354665](image-20220121231354665.png)
+![Leximin6](./Static/Leximin6.png)
 
 ------
 
@@ -203,11 +201,11 @@
 
 ------
 
-![](image-20220121232057611.png)
+![alpha1](./Static/alpha1.png)
 
-![image-20220121232114202](image-20220121232114202.png)
+![alpha2](./Static/alpha2.png)
 
-![image-20220121232209364](image-20220121232209364.png)
+![alpha3](./Static/alpha3.png)
 
 ------
 
@@ -237,11 +235,11 @@ $$
   - Choose the act with the least maximum regret.
 
 
-![image-20220121232357810](image-20220121232357810.png)
+![image-20220121232357810](./Static/minimax1.png)
 
-![image-20220121232404595](image-20220121232404595.png)
+![image-20220121232404595](./Static/minimax2.png)
 
-![image-20220121232409695](image-20220121232409695.png)
+![image-20220121232409695](./Static/minimax3.png)
 
 ------
 
@@ -256,7 +254,7 @@ $$
 
 ------
 
-![image-20220119113306168](image-20220119113306168.png)
+![image-20220119113306168](./Static/IrrelevantAlt.png)
 
 - The ranking of the old acts is changed. $a_1$ is the best act rather $a_2$ in the original one after $a_4$ is added.
 
@@ -276,7 +274,7 @@ $$
 
   
 
-  ![image-20220121233839654](image-20220121233839654.png)
+  ![image-20220121233839654](./Static/InsufficientReason.png)
 
   
 

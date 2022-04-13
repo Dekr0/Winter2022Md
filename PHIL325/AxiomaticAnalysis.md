@@ -1,6 +1,6 @@
 # Axiomatic Analysis
 
-![image-20220121112533441](image-20220121112533441.png)
+![AxiomaticTable](Static/AxiomaticTable.png)
 
 - -- $\rightarrow$ incompatible
 - $\cross\rightarrow$ compatible

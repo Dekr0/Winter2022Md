@@ -77,3 +77,33 @@
 
 ------
 
+## Tit for Tat
+
+------
+
+- A strategy defines the following : 
+  - always **cooperate** in the first round, 
+  - and thereafter **adjust** your behavior to **whatever** your opponent did in the previous round.
+- Thus, in the second round you should cooperate if and only if the opponent cooperated in the first round.
+- It can be modified by introducing probabilistic conditions.
+
+---
+
+## Grim Trigger Strategy
+
+---
+
+- A version of tit for tat.
+- Each player **cooperates** in the **inital round** of the game as well as in every future round as long as the other player cooperates.
+- As soon as the other player defects, the player will defect in all future rounds of the game, no matter what the other players does.
+
+------
+
+## Straightforward vs. Constrained Maximizers
+
+------
+
+- *Straightforward maximizers* always play the dominant strategy, and refuse to cooperate.
+- *Constrained maximizers* cooperate with others *constrained maximizers* but  not with *straightforward maximizers*.
+- Gauthier argues that it's rational to be a *constrained maximizer* rather than a *straightforward maximizer*.
+- Self-interested rational constrained utility maximizers will come to agree on certain "moral" rules.

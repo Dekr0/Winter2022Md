@@ -156,7 +156,7 @@
   | $a_1$ | 7    | 5    |
   | $a_2$ | 4    | 8    |
 
-  ![image-20220128115623377](image-20220128115624319.png)
+  ![image-20220128115623377](Static/AxiomaticApproach3.png)
 
 ------
 
@@ -168,7 +168,7 @@
 - then this can be **compensated** for by **adding some amount of utility** to the other outcome, such that the overall utility of the act is preserved.
 - Trade-off principle
 
-![image-20220128115813842](image-20220128115813842.png)
+![image-20220128115813842](Static/AxiomaticApproach4.png)
 
 - There is some number δ >0, such that for all $\epsilon$ , 0 ≤ $\epsilon_1$ ≤ δ , there is a number $\epsilon_2$ such that the suggested trade off is unimportant to you, i.e. the utility of the original and the modified acts is the same.
 

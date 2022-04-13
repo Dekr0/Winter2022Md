@@ -49,7 +49,7 @@
 ------
 
 - In a symmetric game, all players face the same strategies and outcomes
-- ![SYM vs ASYM](SymmetricGame.png)
+- ![SYM vs ASYM](Static/SymmetricGame.png)
 - Leftmost is symmetric, rightmost is asymmetric
 
 ------
@@ -103,7 +103,7 @@
     - the other 20 years
   - If both deny, each of them will get 2 years.
 - The decision matrix
-- ![Decision Matrix of Prisoner's Dilemma](DecisionMatrixPD.png)
+- ![Decision Matrix of Prisoner's Dilemma](Static/DecisionMatrixPD.png)
 
 ------
 

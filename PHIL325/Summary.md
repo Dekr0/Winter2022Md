@@ -1,5 +1,23 @@
 # Summary
 
+## Scale
+
+---
+
+- ***Ordinal scale*** are invariant up to positive monotone transformations
+  - $f(x) \geq f(y)$ if and only if x $\geq$ y
+  - Ordinal scale cannot conclude the precise difference between two objects.
+- ***Interval scale*** accurately reflects the difference between objects.
+  - $f'(x) = k * f(x) + m$
+  - k and m are constants
+  - It's positive linear transformation
+- ***Ratio scale*** accurately reflects the ratios between objects.
+  - $f'(x) = k * f(x)$
+  - k is constant
+  - It's positive multiplication. 
+
+---
+
 ## Dominance Principle
 
 ------
@@ -170,6 +188,31 @@ $$
 
 ------
 
+## The Law of Large Number
+
+---
+
+- Everyone who try to maximize the expected (utility) value will be better off in the long run.
+- A random event repeat happen $n$ times. The probability of the corresponding even is $p$. 
+- The probability of percentage that differ from $p$ will converges to 0 as $n \to \infty$.
+
+---
+
+### Allais' Paradox
+
+---
+
+- If one player choose act 1 over act 2, then that player have to choose act 3 over act 4 as well. However, players usually choose act 4 instead
+
+  |      | 1/100 | 1/10 | 89/100 |
+  | ---- | ----- | ---- | ------ |
+  | A1   | x     | x    | x      |
+  | A2   | 0     | kx   | x      |
+  | A3   | x     | x    | 0      |
+  | A4   | 0     | kx   | 0      |
+
+---
+
 ## Relationship Properties
 
 ------
@@ -183,12 +226,34 @@ $$
   
 
 - For every x and y, it should hold that : 
+
 - **Completeness** $x \succ y$ or $x \sim y$ or $y \succ x$
+
 - **Asymmetry** If $x \succ y$, then it is *false* that $y \succ x$.
+
 - **Transitivity** If $x \succ y$ and $y \succ z$, then $x \succ z$.
+
 - **Negative Transitivity** If it is *false* that $x \succ y$ and *false* that $y \succ z$, then it is false that $x \succ z$.
   - It implies that indifference is **transitive** (if $x \sim y$ and $y \sim z$, then $x \sim z$).
   - Indifference does not follow form the assumption in **Transitivity**
+
+  
+
+- If a binary relation is symmetric and transitive, then it is necessarily reflexive
+
+  - **reflexivity** : $xRx$ for every $x \in X$
+
+- **Irreflexivity**: For every $x$, $~xRx$.
+
+- **Seriality**: For every $x$, there is some $y$ such that $xRy$.
+
+- **Symmetry**: If $xRy$, then $yRx$. 
+
+- **Antisymmetry**: If $xRy$ and $yRx$, then $x=y$.
+
+- **Connectedness**: If $xRy$ and $xRz$, then either $yRz$ or $zRy$.
+
+- **Convergence**: If $xRy$ and $xRz$, then there is some $u$ such that $yRu$ and $cRu$.
 
 ------
 
@@ -229,33 +294,170 @@ $$
 
 ------
 
-## Kolmogorov Axioms
+### Kolmogorov Axioms
 
 ------
 
-- $1\geq p(A) \geq 0$, probability of every event lies between 0 and 1.
-- $p(S) = 1$, probability of the entire sample space is 1.
-- If $A \cap B = \empty$, then $p(A \cup B)=p(A)+p(B)$ (keyword, sample space).
+- **Axiom 1**:
+  -  $1\geq p(A) \geq 0$, probability of every event lies between 0 and 1.
+
+- **Axiom 2**: 
+  - $p(S) = 1$, probability of the entire sample space is 1.
+
+- **Axiom 3**: 
+  - If $A \cap B = \empty$, then $p(A \cup B)=p(A)+p(B)$ (keyword, sample space).
+  - $A \cap B = \empty$ means A and B are mutually exclusive.
+
+- **Proposition version of Axiom 2:** 
+  - If A is a logical truth, then p(A) = 1.
+
+- **Proposition version** of **Axiom 3**: 
+  - A and B are mutually exclusive, then $p(A \lor B)=p(A) +p(B)$.
+
+
 
 ------
 
-- If it is more natural to think the question by counting thinking instead of using probability for proposition, use counting instead.
-  - For example, choose one red card and one black card without drawback.
-- Notice that condition probability need to consider independency of an event / proposition.
-- Conditional Probability :
-  - p(~B|A) = 1 - p(B|A)
-  - same for p(~A|B) = 1 - p(A|B) 
-- To construct inverse conditional probability :
-  - Look for what the question is asking about to
+### Theorem
 
-------
+---
+
+- **Theorem 6.1**: p(A) + p(~A) = 1
+  - A v ~A is a logical truth and **Axiom 2**
+
+- **Theorem 6.2**: If A and B are logically equivalent, then $p(A) = p(B)$
+  - p(A v ~B) = p(A) + p(~B)
+  - p(A) + p(~B) =  1
+
+- **Theorem 6.3**: 
+  - p(A v B) = p(A) + p(B) - p (A ^ B) 
+
+  - p(A $\to$ B) = p(~A) + p(B) - p(~A ^ B)
+
+- **Definition 6.1**
+  - The probability of A given B, p(A|B).
+  - p(B) $\neq$ 0.
+  - $p(A|B) = \frac{p(A \land B)}{p(B)}$
+  - p(~A|B) = 1 - p(A|B)
+
+- **Definition 6.2**
+  - A is **independent** of B **if and only if** p(A) = p(A|B)
+
+- **Theorem 6.4** (Definition 6.1 and 6.2)
+  - If A is **independent** of B, then p(A ^ B) = p(A) *  p(B).
+
+- **Theorem 6.5** (*Inverse probability law*)
+  - $p(B|A) = \frac{p(B) \space \cdot \space p(A|B)}{p(A)}$, given that p(A) $\neq$ 0.
+  - **Theorem 6.2** and **Definition 6.1**
+
+- **Theorem 6.6**
+
+  - $$
+    p(B|A) = \frac{p(B) \space \cdot \space p(A|B)}
+    {[p(B) \space \cdot \space p(A|B)] + 
+    [p(\lnot B) \space \cdot \space p(A|\lnot B)]}
+    $$
+
+  - given that p(A) $\neq$ 0
+
+  - eliminate one of the unconditional probability
+
+  - $p(B)$ is known as the ***prior probability***
+
+
+
+---
 
 ### Unknown Priors
 
 ------
 
-- Prior probability / unconditional probability of B : p(B)
-- Probability that are given
-  - Probability of A happen n times given not B : p(A|~B) = $x^n$
-  - Probability of A happen n times given B : p(A|B) = $x'^n$
-- Find probability of B / not B happen given A (posterior): p(B|A) and p(~B|A)
+- ***Prior probability*** : p(B)
+  - Unconditional probability of B
+
+---
+
+#### Case Study
+
+------
+
+- Playing Roulette with 38 numbered pockets marked (0, 00, 1, 2, 3, ..., 36).
+- The house wins whenever the ball falls into the 0 or 00.
+- However, the first five times you play, the house wins every single time.
+  - Suspect the roulette wheel is manipulated but don't know how many.
+  - What is probability that the roulette wheel in front of you is manipulated? (***Given that the house win 5 times in a row).
+- p(B), probability that the wheel is rigged.
+  - ***Prior Probability***
+
+- p(B|5H), probability that the wheel is rigged 
+  - given that the house wins five times in a row.
+
+- All five trials are independent of each other
+  - p(5H|~B) = (1/19) ^ 5.
+
+- Newspaper article p(5H|B) = (1/2)^5.
+  - It's much higher than p(5H|~B).
+  - The observation fit better when the hypothesis that the wheel is biased.
+
+- ***Prior Probability***, p(B), is unknown.
+- Right now, you have a equation for ***Bayes' Theorem*** but with two unknown
+  - p(B) and p(B|5H).
+
+
+---
+
+- If the ***prior probability***, p(B) is unknown, one can choose whatever value of p(B) he / she wishes.
+  - Depend on the situations and personal believe.
+  - Case study :
+    - Higher prior if there are many manipulated roulette wheels.
+    - Lower prior if the owner respects the law.
+- By inserting the chosen ***prior probability*** into ***Bayes' Theorem***, one can find
+  - p(B|A) and p(~B|A) = 1- p(B|A).
+- By applying ***Bayes' Theorem***, one has been able to *update* his / her initial beliefs from the new information.
+- The **new probabilities**, p(B|A) and p(~B|A), are ***posterior probability***.
+  - The **new probabilities** are yielded by using
+  -  ***prior probability***, p(B), and 
+  - some observation on p(A|B) and p(A|~B).
+- To choose a (next) prior that is close to "correct" one,
+  - use the **first posterior probability** as the **new prior probability** 
+    - when applying Bayes' theorem in the next time.
+  - observe the events several more times,
+  - apply Bayes' theorem again to the new data set.
+- This strategy "wash out" the incorrect prior probability using new data.
+  - Each time Bayes' theorem is applied, one will get somewhat closer to the truth.
+
+------
+
+#### Example
+
+---
+
+- Rolling four fair dice. What is the probability of getting at least one six?
+  - A - get at least one six in a roll of four dice.
+  - ~A is logically equivalent with getting no six at all when rolling four dice
+  - p(~A) = 1- 5/6 * 5/6 * 5/6 * 5/6 = 0.52
+- **Theorem 6.2** 
+  - What is the probability of A and B? Given that the probability of A is 0.2 and the probability of B is 0.1, whereas the probability of A or B is 0.25
+  - p(A ^ B) = p(A) + p(B) - p(A v B) = 0.05
+- **Definition 6.1**
+  - Roll a fair die twice. Given that the first roll is a 5, what is the probability that the total sum will exceed 9?
+  - A = "the sum exceeds 9", 10, 11, 12.
+  - B = "the first roll is a 5".
+  - p(A ^ B) = "The sum exceeds 9 and the first roll is a 5" = 2/36
+    - This require you to count.
+    - Don't fall into the infinite loop using **Theorem 6.2**.
+
+  - Be careful to each statement and its logical form. 
+    - They can be very similar but they are completely different in logical sense.
+    - Example :  p(A ^ B) and p(A|B).
+- **Theorem 6.5**
+  - Probability that the gearbox will break down (B) given the appearance of a welding crack (A).
+  - 90 % of all broken gearboxes have welding cracks, p(A|B) = 0.9.
+  - 10% of all gearboxes break down during the lifespan, p(B) = 0.1.
+  - 20% of all gearboxes have welding cracks, p(A) = 0.2.
+  - p(B|A) = 0.1 * 0.9 / 0.2 = 0.45
+  - Be careful to assign variable
+  - Be careful reading the statement and identify which variable is the given one / condition.
+
+------
+

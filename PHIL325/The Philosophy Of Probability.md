@@ -54,6 +54,20 @@
 
 ------
 
+## Logical View
+
+---
+
+- Probability is the logical relation between a hypothesis and the evidence that supports it
+- Probability is the degree of support and confirmation that a piece of evident provides for a hypothesis.
+- Deductive logic : deterministic
+- Inductive logic : indeterministic / probabilistic
+- Objection : It is too dependent on **evidence**
+  - It can lead to pure guesses that are irrational.
+  - However, this can be verified using probability calculus to check whether a set of guesses is coherent or not.
+
+---
+
 ## Subjective Views
 
 ------
@@ -101,4 +115,20 @@
   - preference must be altered if the price is changed to $101.
 - Ratio between the fair price of a bet and the absolute value of the amount at stake is called the betting quotient.
   - stake: (share involvement in something such as a business)
-- Decision maker has to announce his betting quotients for a fairly large  number of bets. (detailed 164).
+- Decision maker has to announce his betting quotients for a fairly large number of bets. (detailed 164).
+
+------
+
+#### Case Study
+
+------
+
+- You believe to degree 0.55 that at least one person from India will win a gold medal (event G).
+- Your subjective degree of belief is 0.52 that no Indian will win a gold medal (event ~G).
+- Also suppose that a bookie offers you to bet on both these events.
+- The bookie promises to pay you $1 for each event that actually take place.
+- Now, you will pay up
+  - \$1 * 0.55 = \$0.55 for event G
+  -  \$1 * 0.52 = \$52 for event ~G.
+- Now, you have paid \$1.07 for taking on two bets that certain give you a payoff of \$1 no matter what happen.
+- Regardless of what happen, you certainly loss \$0.07.
