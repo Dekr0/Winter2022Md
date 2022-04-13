@@ -55,9 +55,11 @@
 1. (Chapter 5) Subjective degrees of belief can be represented by 
    - a ***probability function*** defined in terms of the decision maker's preferences over uncertain prospects
 
-2.  (Chapter 7) The decision maker's desires can be represented by
+2. (Chapter 7) The decision maker's desires can be represented by
    - a **utility function** defined in terms of preferences over uncertain prospects
 3. Rational decision makers act ***as if*** they maximize ***subjective expected utility***.
+   1. Why it's "**as if**" instead of "**according to**"
+
 
 ------
 
@@ -66,7 +68,8 @@
 - The probability and utility functions are established by reasoning backwards :
   - since the agent preferred some uncertain prospects to others,
   - and the preferences over uncertain prospects satisfy a number of structural axioms,
-  - the agent behaves as if ... (consistent with the principle of maximizing ...)
+  - the agent behaves as if he / she had acted from 
+    - a subjective probability function and a utility function
 
 ------
 
@@ -163,7 +166,7 @@
 - Because z is strictly better than x, even after you have paid the fee for swapping, rationality tells you that you should accept the offer.
 - This means that you end up where you started, the only difference being that you now have three cents less.
 - This procedure is thereafter iterated over and over again. After a billion cycles you go bankrupts.
-- ![Cyclic Preference](../Static/CyclicPreference.png)
+- ![Cyclic Preference](./Static/CyclicPreference.png)
 
 - Conclusion is ***not*** that a rational preference must be transitive.
 - The conclusion is rather that if we permit cyclic preference orderings, then the contradiction in the ***money pump argument*** is unavoidable.
