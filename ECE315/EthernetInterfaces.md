@@ -1,6 +1,9 @@
 # Ethernet Interfaces in $\micro$Controllers
 
 - loopback mode is good for debugging. Send its own signal back to itself. 
+- DDR - Double Data Rate
+  - Passing data in both rising and falling edge of the clock.
+
 
 ------
 
@@ -90,3 +93,5 @@
 - PHY on the receive side first finds out the clock, taken out the extra bit for encoding purposes
 - Then, processing 4 bits one at a time RXD[3:0]
 - The frame is discard even if there is one dirty bit within
+
+---
