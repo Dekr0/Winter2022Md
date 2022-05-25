@@ -49,15 +49,7 @@
 
 ---
 
-## Models of the Anatomy of an Incident
-
----
-
-- There are many.
-
----
-
-### Type 1 - Injury Triangle
+## The Incident Model - Injury Triangle
 
 ---
 
@@ -95,3 +87,42 @@
 
 ---
 
+### Application of The Incident Model
+
+---
+
+- **The discovery approach**
+- Answering the following question
+- What was the energy source ?
+  - Look for the **source**
+  - How / what can cause or **initiate** the controlled or uncontrolled **release** of an energy source ?
+- Who / What was in the line of fire ?
+  - Look for people, assets, and environment that **can be harmed** by a release of the **energy source**
+  - How / What can **put** someone or something into the **line of fire** ?
+- What was the loss of control ?
+  - Look for the **inadequate control measures** that are 
+    - preventing / limiting / controlling exposure to the energy source
+    - keeping someone / something out of the line of fire
+  - How / What can **defeat a control measure**
+    - overrides / short-cuts on control measures
+    - intentional / unintentional exposure to a protected / unprotected energy source
+
+---
+
+## Situational Awareness
+
+---
+
+- A key skill in monitoring for hazards (both workers and leaders)
+
+- Recognize the presence of danger (hazard recognition)
+
+  - first step in situational awareness
+
+- Relentless, almost continuous, assessment of a person's surrounding for potential and actual hazards
+
+- Judge the level of danger posed by the hazard (risk perception)
+
+- Decide how to behave around the hazard (risk tolerance)
+
+  
