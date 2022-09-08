@@ -84,6 +84,12 @@ def BFS(s_0, s_g, T):
 - BFS minimizes the amount of edges it travel / hop but fails to find optimal solutions in general.
 - Action costs often aren't unitary.
 ---
+### Workthrough
+---
+![](static/02-lecture-bfs-graph.png)
+
+![](static/02-lecture-bfs-workthrough.png)
+---
 ## Dijkstra's Algorithm
 ---
 ### Algorithm's Overview
@@ -93,8 +99,19 @@ def BFS(s_0, s_g, T):
 - `OPEN`
   - priority queue
     - implementation of a priority queue: heap (particularly binary heap)
+      - i.e., node with cheapest value is always on the top of the priority queue (?)
+    - e.g. `heapq` in Python
+      - insert nodes in `OPEN` in $O(\log{n})$, 
+        - $n \rightarrow$ size of the heap
+      - retrieve the cheapest ndoe in $O(1)$
+      - remove $n$ from `OPEN` in $O(\log{n})$ due to rearrange the heap
+    - update a node require reconstruction of the heap strucutre to ensure the heap is still valid.
+      - expensive $\rightarrow$ linear in the size of the heap
+      - but rarely happen unless there is a better path is found to a state
 - `CLOSED`
   -  same data strcutures used in BFS
+  -  No side effects in `CLOSED` as the has table dose not depend on the cost of the nodes.
+
 ---
 ### Algorithm's Description
 ---
@@ -118,24 +135,56 @@ def BFS(s_0, s_g, T):
 - Complete
 - Optimal $\leftarrow$ expands all cheapest paths before moving on more expensive ones
 - Time complexity
-- 
+  - assume the actions have unit costs such that the optimal solution cost $C^*$ equals the depth $d$ in which the solution is encountered.
+  - $O(b^{d+1})$
+  - Worst case, all nodes at depth $d$ must be expanded **as** the goal can be the **last state** expanded **at that depth**
+    - all nodes at depth $d+1$ are generated
 ---
-- Find smallest length to smallest cost
-- Expand cheapest node in `open`
-  - Implementation $\rightarrow$ Priority Queue (Heap)
-- Implementation difference compared to BFS
-  - Stop when goal comes out of `open`
-  - Update cost to nodes if a better path is found (also for parent pointers)
-  - FIFO $\rightarrow$ PQ
-- Implementation
-  1. find and remove cheapest node form `open`
-    - Heap (Binary Heap)
-      - Find: $O(1)$
-      - Remove: $O(\log{n})$
-      - Insert $O(\log{n})$
-      - must be careful with the state of the heap when updating cost
-      - re-heapify is expensive ($O(n)$) but happen rarely
-    - paying linear complexity for finding cheapst cost node if using simple list
-  2. Verify if a state was seen before in search (Hashmap / Hashtable) as well as check whether a better path is found (instead of scan through the open list)
-    - $O(1)$ 
-- Both open list and closed list share the same pointer / reference of all nodes 
+### Implementation
+---
+- Two operations:
+  - Find the node with **minimum cost** in `OPEN`
+  - Verify if a node was already encountered in search by
+    - checking whether the state the node represents is in `CLOSED`.
+---
+### Pseduo Code
+---
+```python
+def dijkstra(s_0, s_g, T):
+  OPEN.append(s_0)
+  closed.add(s_0)
+  while not OPEN.empty():
+    n = OPEN.pop()
+    if n == s_g:
+      return path() # path() will return path between s_0 and n'
+    for _n in T(n):
+      if _n not in CLOSED:
+        OPEN.append(_n)
+        CLOSED.add(_n)
+      # if it has found better path
+      if _n is in CLOSED and g(_n) < CLOSED[_n].g_value:
+        update g(_n) in OPEN and CLOSED
+        update parent(_n) in CLOSED
+        # update parent of n'
+        OPEN.heapify() # reorganize heap structure
+```
+
+- The implementation adds the same copy of each node to `OPEN` and `CLOSED`.
+  - an efficient way of checking if the algorithm found a better path to a given state due to hash table and pointers (reference)
+- What if node $n'$ is in `CLOSED` but not in `OPEN`
+  - $\rightarrow$ node $n'$ was already expanded.
+  - Dijkstra's algorithm guarantees that when a node is expanded, it is expanded with its value
+  - Otherwise, it wouldn't guarantee optimal solutions.
+- If $n'$ is in `CLOSED` but not in `OPEN`, 
+  - one cannot find a cheaper path to the state $n'$ represents
+  - and the second part of the Boolean expression in will always be false.
+- Update the value of $g(n')$ in both `OPEN` and `CLOSED` simultaneously.
+  - have both structures point to the same object in memory, quick access and update with hash table.
+- Update the parent of $n'$ in `CLOSED`.
+  - because a better pat from the root of the tree to $n'$ is found, in case the solution goes through $n'$ and the solution path is recovered.
+--- 
+### Workthrough
+---
+![](static/02-lecture-dijkstra-graph.png)
+
+![](static/02-lecture-dijkstra-workthrough.png)
