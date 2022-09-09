@@ -179,7 +179,7 @@ def dijkstra(s_0, s_g, T):
   - one cannot find a cheaper path to the state $n'$ represents
   - and the second part of the Boolean expression in will always be false.
 - Update the value of $g(n')$ in both `OPEN` and `CLOSED` simultaneously.
-  - have both structures point to the same object in memory, quick access and update with hash table.
+  - have both structures point to the same object in memory, quick access and update with hash table (`CLOSED`).
 - Update the parent of $n'$ in `CLOSED`.
   - because a better pat from the root of the tree to $n'$ is found, in case the solution goes through $n'$ and the solution path is recovered.
 --- 
