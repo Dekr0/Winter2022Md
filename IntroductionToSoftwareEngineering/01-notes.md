@@ -123,6 +123,14 @@ public class FixSizeWindow extends Window {
 ### CRC Cards
 ---
 - Role play to checkout whether the design make sense and sound
+- Ask questions
+- Get into the details rather than high level / general view
+  - Include details that are seems obvious
+    - Might overlook and forget during the design and implementation
+  - Keep a good balance between abstract and detail
+- Think in future / further ahead
+- Revisit
+---
 ### Evaluation
 ---
 - is it necessary create a class to encapsulate a simple thing
@@ -140,3 +148,40 @@ public class FixSizeWindow extends Window {
     - same for cohesion but in another way around
   - find a balance point
   - OOP try to make a class more cohesion but the coupling can be complicate
+- There is a balance about simplicity
+  - It does not mean using what intially come out of mind (naive approach) because it might not be a good design
+  - Try to keep it elegant and simple. Interface, abstract classes and superclasses are good in the future development but it might not be used in the current stage. 
+---
+## Project
+---
+- The project app should be built extensive despite it is term project.
+  - The project app might be used in the future
+- Each week should have a closure instead of have tasks unfinished / partial 
+finished, incompleted unit testing.
+  - Testing should integrate with the development process
+    - i.e., intergrate testing as earlier as possible
+  - Integrate components as earlier as possible to ensure all components work 
+  as intended
+- Get start on
+  - Firestore
+    - Get a grasp on the basic
+  - Unit Testing on Android Studio
+---
+## Class Participation Exercise 5
+---
+- General class: `Piece` -> location, white or black, etc. (basic functionality)
+  - specialize classes for different type of pieces
+    - special type of movement
+    - ...
+- `Board` class -> track and manging pieces, winning condition?
+- `Side` / `Player` class
+- Not every action in a question corresponding to a method in class. It might be better to make them into a class in terms of design.
+  - Actions that need additioanl information to descirbe them
+  - Actions can be things -> a class.
+    - has-a relationship
+- Sergate classes into smaller classes / Factor components from classes into other classes 
+  - based on responsibilities
+- Program to supertype and also break down abstract concepts into more elemental (basic) and detail (concrete) concepts.
+---
+## Wireframe and Story board
+---
