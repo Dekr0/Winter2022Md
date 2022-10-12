@@ -42,3 +42,28 @@
 - Split an architecture in a vertical manner instead of horizontal manner
   - In one split, it should include all types of classes (Boundary, Control, Entity) instead of one specific type of classes (Horizontally)
 - Allow the end user to interact (front end) instead of only backend with no interactable.
+---
+### Manifesto
+---
+- Balance simplicity and complexity
+  - This is why preparing stage (UI mock up, OO analysis, DB setup) come into place instead of cope along the way
+---
+## XP (Extreme Programming)
+---
+- Work for small teams
+---
+### Pairing Programming
+---
+- Benefits from
+  - debugging through pair aduit
+  - feedback through aduit
+  - generate proposals, solutions, approaches, methods through different perspective.
+- Finish planning out how the implementation will generally be
+  - For instance, a function / method call
+    - Appropriate signature and it should be easy to use
+    - Write all the necessary unit testing
+    - Implementation
+- Think about the unit testing for the implementation
+  - The implementation should be easier use (invoke, access, etc.)
+- Thinkg about how the implementation is used by users and clients
+  - Same above
